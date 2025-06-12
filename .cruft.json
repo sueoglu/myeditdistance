@@ -1,0 +1,43 @@
+{
+  "template": "https://github.com/scverse/cookiecutter-scverse",
+  "commit": "1275eab94e86e182af7b0d66fbbb3d540682f140",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "firstTask",
+      "package_name": "myeditdistance",
+      "project_description": "Calculating the edit distance",
+      "author_full_name": "Öykü Süoglu",
+      "author_email": "oykusuogluu@gmail.com",
+      "github_user": "sueoglu",
+      "github_repo": "myeditdistance",
+      "license": "MIT License",
+      "ide_integration": true,
+      "_copy_without_render": [
+        ".github/workflows/build.yaml",
+        ".github/workflows/test.yaml",
+        "docs/_templates/autosummary/**.rst"
+      ],
+      "_exclude_on_template_update": [
+        "CHANGELOG.md",
+        "LICENSE",
+        "README.md",
+        "docs/api.md",
+        "docs/index.md",
+        "docs/notebooks/example.ipynb",
+        "docs/references.bib",
+        "docs/references.md",
+        "src/**",
+        "tests/**"
+      ],
+      "_render_devdocs": false,
+      "_jinja2_env_vars": {
+        "lstrip_blocks": true,
+        "trim_blocks": true
+      },
+      "_template": "https://github.com/scverse/cookiecutter-scverse",
+      "_commit": "1275eab94e86e182af7b0d66fbbb3d540682f140"
+    }
+  },
+  "directory": null
+}
