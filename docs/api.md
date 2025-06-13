@@ -23,6 +23,7 @@
     :toctree: generated
 
     tl.basic_tool
+    tl.edit_distance
 ```
 
 ## Plotting
