@@ -4,7 +4,7 @@
 [![Documentation][badge-docs]][documentation]
 
 [badge-tests]: https://img.shields.io/github/actions/workflow/status/sueoglu/myeditdistance/test.yaml?branch=main
-[badge-docs]: https://img.shields.io/readthedocs/firstTask
+[badge-docs]: https://img.shields.io/readthedocs/myeditdistance
 
 Calculating the edit distance
 
@@ -51,7 +51,7 @@ If you found a bug, please use the [issue tracker][].
 [scverse discourse]: https://discourse.scverse.org/
 [issue tracker]: https://github.com/sueoglu/firstTask/issues
 [tests]: https://github.com/sueoglu/myeditdistance/actions/workflows/test.yaml
-[documentation]: https://firstTask.readthedocs.io
-[changelog]: https://firstTask.readthedocs.io/en/latest/changelog.html
-[api documentation]: https://firstTask.readthedocs.io/en/latest/api.html
+[documentation]: https://myeditdistance.readthedocs.io
+[changelog]: https://myeditdistance.readthedocs.io/en/latest/changelog.html
+[api documentation]: https://myeditdistance.readthedocs.io/en/latest/api.html
 [pypi]: https://pypi.org/project/firstTask
