@@ -3,7 +3,7 @@ build-backend = "hatchling.build"
 requires = [ "hatchling" ]
 
 [project]
-name = "firstTask"
+name = "firsttask"
 version = "0.0.1"
 description = "Calculating the edit distance"
 readme = "README.md"

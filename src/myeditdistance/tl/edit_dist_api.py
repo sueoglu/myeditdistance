@@ -1,3 +1,3 @@
-import myeditdistance as calc
+import myeditdistance as ed
 
-print(calc.edit_distance("kitten", "sitting"))
+print(ed.edit_distance("kitten", "sitting"))
