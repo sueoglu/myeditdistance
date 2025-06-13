@@ -4,7 +4,7 @@
 [![Documentation][badge-docs]][documentation]
 
 [badge-tests]: https://img.shields.io/github/actions/workflow/status/sueoglu/myeditdistance/test.yaml?branch=main
-[badge-docs]: https://img.shields.io/readthedocs/myeditdistance
+[badge-docs]: https://img.shields.io/readthedocs/firsttask
 
 Calculating the edit distance
 
