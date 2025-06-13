@@ -1,5 +1,5 @@
 def edit_distance(string1: str, string2: str) -> int:
-    """Run the edit distance algorithm on string1 and string2.
+    """Run the Levenshtein algorithm on string1 and string2.
 
     Parameters
     ----------

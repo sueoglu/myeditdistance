@@ -1,40 +1,46 @@
 import pytest
 
-import myeditdistance
+import myeditdistance as ed
 
 
 def test_package_has_version():
-    assert myeditdistance.__version__ is not None
+    assert ed.__version__ is not None
+
+
+def test_package_importable():
+    pass
 
 
 @pytest.mark.skip(reason="This decorator should be removed when test passes.")
-def test_example():
+def test_wrong_edit_distance():
     assert 1 == 0  # This test is designed to fail.
 
 
 @pytest.mark.skip(reason="This decorator should be removed when test passes.")
 @pytest.mark.parametrize(
-    "transform,layer_key,max_items,expected_len,expected_substring",
+    "output, expected",
     [
-        # Test default parameters
-        (lambda vals: f"mean={vals.mean():.2f}", None, 100, 1, "mean="),
-        # Test with layer_key
-        (lambda vals: f"mean={vals.mean():.2f}", "scaled", 100, 1, "mean=0."),
-        # Test with max_items limit (won't affect single item)
-        (lambda vals: f"max={vals.max():.2f}", None, 1, 1, "max=6.70"),
+        # Test identical strings
+        (ed.edit_distance(string1="kitten", string2="kitten"), 0),
+        # Test insertion
+        (ed.edit_distance(string1="kitten", string2="kittens"), 0),
+        # Test deletion
+        (ed.edit_distance(string1="hello", string2="hllo"), 1),
+        # Test substition
+        (ed.edit_distance(string1="hello", string2="hallo"), 1),
+        # Test one string empty
+        (ed.edit_distance(string1="", string2="kitten"), 6),
+        (ed.edit_distance(string1="kitten", string2=""), 6),
+        # Test both strings empty
+        (ed.edit_distance(string1="", string2=""), 0),
+        # Test any input
+        (ed.edit_distance(string1="kitten", string2="sitting"), 3),
     ],
 )
-def test_elaborate_example_adata_only_simple(
-    adata,  # this tests uses the adata object from the fixture in the conftest.py
-    transform,
-    layer_key,
-    max_items,
-    expected_len,
-    expected_substring,
-):
-    result = myeditdistance.pp.elaborate_example(
-        items=[adata], transform=transform, layer_key=layer_key, max_items=max_items
-    )
+def test_edit_distance(output, expected):
+    assert output == expected
 
-    assert len(result) == expected_len
-    assert expected_substring in result[0]
+
+def test_invalid_input():
+    with pytest.raises(TypeError):
+        ed.edit_distance(123, "kitten")
