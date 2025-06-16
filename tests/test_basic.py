@@ -16,14 +16,14 @@ def test_wrong_edit_distance():
     assert 1 == 0  # This test is designed to fail.
 
 
-@pytest.mark.skip(reason="This decorator should be removed when test passes.")
+# @pytest.mark.skip(reason="This decorator should be removed when test passes.")
 @pytest.mark.parametrize(
     "output, expected",
     [
         # Test identical strings
         (ed.edit_distance(string1="kitten", string2="kitten"), 0),
         # Test insertion
-        (ed.edit_distance(string1="kitten", string2="kittens"), 0),
+        (ed.edit_distance(string1="kitten", string2="kittens"), 1),
         # Test deletion
         (ed.edit_distance(string1="hello", string2="hllo"), 1),
         # Test substition
