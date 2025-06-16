@@ -4,7 +4,7 @@ requires = [ "hatchling" ]
 
 [project]
 name = "firsttask"
-version = "0.0.1"
+version = "0.0.2"
 description = "Calculating the edit distance"
 readme = "README.md"
 license = { file = "LICENSE" }
